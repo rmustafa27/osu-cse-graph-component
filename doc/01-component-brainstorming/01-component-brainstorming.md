@@ -1,12 +1,10 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: Rand Mustafa
+- **Dot Number**: mustafa.128
+- **Due Date**: 02-06-26
 
 ## Assignment Overview
-
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,8 +27,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
-
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
 opening the TODOs window from the sidebar. The icon looks like a tree and will
@@ -52,8 +48,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
-
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
 what we're hoping you will learn through this particular aspect of the portfolio
@@ -66,8 +60,6 @@ project. Specifically, students should be able to:
    discipline
 
 ## Assignment Rubric: 10 Points
-
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,23 +98,15 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+My long-term goal is to work in cybersecurity and infrastructure-focused roles, where understanding system relationships, reachability, and dependencies is critical. I value designing software that mirrors real-world systems and emphasizes correctness, maintainability, and clarity. The components I designed reflect these values by modeling network connectivity, priority-based processing, and controlled access to shared resources—concepts that regularly appear in secure system design.
 
 ## Assignment
-
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
 that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
-
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -142,8 +126,6 @@ list-like components that have different ways of manipulating the data. Think
 about different ways you might allow a client to manipulate your component.
 
 ### Example Component
-
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -211,68 +193,137 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: `Graph`
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+      The purpose of this component is to model a directed, unweighted graph. This design is intended to support cybersecurity/network modeling where vertices represent hosts/services and edges represent allowed connections or trust relationships. The kernel focuses on creating/removing vertices and edges with minimal operations, while the secondary interface provides higher-level queries and graph algorithms (e.g., reachability).
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
-  - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
-    - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+    - `void addVertex(V v)`: adds `v` as a vertex (no effect if already present)
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
-  - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
-  - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void removeVertex(V v)`: removes vertex `v` and all edges incident from/to it
+
+    - `void addEdge(V from, V to)`: adds directed edge `(from, to)`
+
+    - `void removeEdge(V from, V to)`: removes directed edge `(from, to)`
+
+    - `boolean containsVertex(V v)`: reports whether `v` is a vertex
+
+    - `boolean containsEdge(V from, V to)`: reports whether `(from, to)` is an edge
+
+    - `V removeAnyVertex()`: removes and returns an arbitrary vertex
+
+    - `components.map.Map.Pair<V,V> removeAnyEdge()`: removes and returns an arbitrary edge
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
-  - **Additional Considerations** (*note*: "I don't know" is an acceptable
-    answer for each of the following questions):
+    - `int order()`: returns number of vertices
+
+    - `int size()`: returns number of edges
+
+    - `boolean isEmpty()`: reports whether graph has no vertices
+
+    - `int outDegree(V v)`: returns number of outgoing edges from `v`
+
+    - `int inDegree(V v)`: returns number of incoming edges to `v`
+
+    - `components.set.Set<V> reachableFrom(V start)`: returns set of vertices reachable from `start` (BFS)
+
+    - `boolean isReachable(V start, V target)`: reports whether `target` is reachable from `start`
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable. Answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component rely on any internal classes (e.g., `Map.Pair`)?
-      Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Would this component need any enums or constants (e.g.,
-      `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
-    - Can you implement your secondary methods using your kernel methods?
-      Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+
+        Yes. Because the component would inherit from `Standard`, it must support mutating operations such as `clear` and `transferFrom`. Additionally, the kernel methods explicitly mutate the graph by adding/removing vertices and edges.
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)? Answer and explain:
+
+        Yes. The method `removeAnyEdge` naturally returns two vertices as one edge, so `Map.Pair<V,V>` is a convenient existing internal type to represent an ordered pair without defining a new public class.
+    - Would this component need any enums or constants (e.g., `Program.Instruction`)? Answer and explain:
+
+        I don’t know / not required for the basic directed, unweighted design. If the component were extended later, an enum could represent directionality or allow/deny relationship types, but the base design does not require constants.
+    - Can you implement your secondary methods using your kernel methods? Answer, explain, and give at least one example:
+
+        Yes. The secondary methods are defined as convenience operations that can be computed from kernel behavior. For example, `size()` can be computed by repeatedly using `removeAnyEdge()` to count edges and then restoring the graph, or more practically by scanning through edges using only kernel-defined manipulations in the implementation. Another example: `isReachable(start, target)` can be implemented as a BFS that only relies on `containsVertex`, `containsEdge`, and the ability to systematically explore outgoing edges as represented internally.
+
+- Component Design #2: `GraphAssembleDisassemble`
+  - **Description**:
+
+      This design models a directed, unweighted graph but avoids exposing neighbor sets through aliases. Instead, it allows clients to manipulate the structure by assembling and disassembling a local portion of the graph around a chosen vertex. This mirrors the “assemble/disassemble tree” style: clients temporarily extract a vertex’s adjacency information, modify it, then reassemble it back into the graph. This approach emphasizes avoiding aliasing and makes it easier to keep the representation invariant private.
+  - **Kernel Methods**:
+    - `void addVertex(V v)`: adds `v` as an isolated vertex
+
+    - `boolean containsVertex(V v)`: reports whether `v` is a vertex
+
+    - `components.set.Set<V> disassembleOutNeighbors(V v)`: removes all outgoing edges from `v` and returns the set of former out-neighbors
+
+    - `void assembleOutNeighbors(V v, components.set.Set<V> nbrs)`: adds outgoing edges from `v` to every vertex in `nbrs`, and restores `nbrs` to empty
+
+    - `void removeVertex(V v)`: removes `v` and any incident edges
+
+    - `V removeAnyVertex()`: removes and returns an arbitrary vertex
+  - **Secondary Methods**:
+    - `void addEdge(V from, V to`)`: implemented by disassembling from, inserting to, and reassembling
+
+    - void removeEdge(V from, V to): implemented by disassembling `from`, removing `to`, and reassembling
+
+    - `boolean containsEdge(V from, V to)`: implemented by disassembling/reassembling (or by checking membership during disassembly)
+
+    - `int outDegree(V v)`: implemented using `disassembleOutNeighbors` + `assembleOutNeighbors`
+
+    - `components.set.Set<V> reachableFrom(V start)`: BFS using repeated disassembly to discover neighbors
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable answer for each of the following questions):
+    - Would this component be mutable? Answer and explain:
+
+        Yes. The graph must be mutable because the kernel operations assemble/disassemble explicitly mutate the structure. Also, inheriting from Standard implies mutating methods like `clear` and `transferFrom`.
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)? Answer and explain:
+
+        Not necessarily. This design primarily relies on `Set<V>` because disassembly returns a neighbor set directly. No ordered-pair return type is required.
+    - Would this component need any enums or constants (e.g., `Program.Instruction`)? Answer and explain:
+
+        I don’t know / not required. The core idea is structural manipulation, so no constants are needed in the minimal design.
+    - Can you implement your secondary methods using your kernel methods? Answer, explain, and give at least one example:
+
+        Yes. For example, to implement `addEdge(from, to)`, the secondary method can call `disassembleOutNeighbors(from)` to obtain a set `S`, add to to `S`, then call `assembleOutNeighbors(from, S)`. This uses only kernel operations and preserves the no-aliasing intent.
+
+- Component Design #3: `GraphWalk`
+  - **Description**:
+
+      This design models a directed, unweighted graph with a kernel that supports controlled traversal without exposing internal structures. Instead of returning a neighbor set (aliasing risk) or requiring assemble/disassemble, this design provides kernel operations to “walk” through outgoing neighbors one at a time in a safe, queue-like manner. This is designed to support cybersecurity use-cases like repeatedly discovering the next reachable connection without needing direct access to an adjacency set.
+  - **Kernel Methods**:
+    - `void addVertex(V v)`: adds `v` as a vertex
+
+    - `void removeVertex(V v)`: removes `v` and incident edges
+
+    - `void addEdge(V from, V to)`: adds edge `(from, to)`
+
+    - `void removeEdge(V from, V to)`: removes edge `(from, to)`
+
+    - `boolean containsVertex(V v)`: reports whether `v` is a vertex
+
+    - `boolean containsEdge(V from, V to)`: reports whether `(from, to)` is an edge
+
+    - `void startOutNeighborWalk(V v)`: initializes an internal “cursor” for iterating over out-neighbors of v
+
+    - `boolean hasNextOutNeighbor()`: reports whether more out-neighbors remain in the current walk
+
+    - `V nextOutNeighbor()`: returns the next out-neighbor in the current walk
+  - **Secondary Methods**:
+    - `int outDegree(V v)`: implemented by starting a walk and counting neighbors
+
+    - `components.set.Set<V> outNeighbors(V v)`: implemented by starting a walk and collecting results into a new set
+
+    - `components.set.Set<V> reachableFrom(V start)`: BFS built using neighbor-walk operations
+
+    - `boolean isReachable(V start, V target)`: BFS/DFS style traversal
+  - **Additional Considerations** (*note*: "I don't know" is an acceptable answer for each of the following questions):
+    - Would this component be mutable? Answer and explain:
+
+        Yes. The component is mutable due to vertex/edge updates and because `Standard` requires mutating methods. Additionally, the traversal walk methods mutate internal traversal state (the “cursor”) even if they do not change the abstract graph.
+    - Would this component rely on any internal classes (e.g., `Map.Pair`)? Answer and explain:
+
+        No. This design does not need to return an edge as a pair; traversal returns vertices one at a time.
+    - Would this component need any enums or constants (e.g., `Program.Instruction`)? Answer and explain:
+
+        Possibly. If multiple traversal modes are supported (e.g., out-neighbors vs in-neighbors), an enum could represent the walk mode. For the minimal design described here, no constants are required.
+    - Can you implement your secondary methods using your kernel methods? Answer, explain, and give at least one example:
+
+        Yes. For example, `outNeighbors(v)` can be implemented by calling `startOutNeighborWalk(v)` and then repeatedly calling `nextOutNeighbor()` while `hasNextOutNeighbor()` is true, inserting each result into a fresh `Set<V>` that is returned to the client.
 
 ## Post-Assignment
 
