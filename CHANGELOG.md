@@ -22,6 +22,6 @@ Security: in case of vulnerabilities.
 
 ### Added
 
-- Designed a `Graph`component
+- Designed a `Graph` component
 - Designed a `GraphAssembleDisassemble` component
 - Designed a `GraphWalk` component
