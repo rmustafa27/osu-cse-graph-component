@@ -352,7 +352,7 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
-- Designed a `Graph`component
+- Designed a `Graph` component
 - Designed a `GraphAssembleDisassemble` component
 - Designed a `GraphWalk` component
 ```

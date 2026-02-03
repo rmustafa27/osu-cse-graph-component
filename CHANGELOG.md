@@ -18,7 +18,7 @@ Fixed: for any bug fixes.
 
 Security: in case of vulnerabilities.
 
-## [2026-02-06]
+## [2026-02-03]
 
 ### Added
 
