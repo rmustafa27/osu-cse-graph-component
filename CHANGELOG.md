@@ -25,3 +25,9 @@ Security: in case of vulnerabilities.
 - Designed a `Graph` component
 - Designed a `GraphAssembleDisassemble` component
 - Designed a `GraphWalk` component
+
+## [2026-02-24]
+
+### Added
+
+- Designed a proof of concept for Graph component (single-file MVP with reachability demo).
