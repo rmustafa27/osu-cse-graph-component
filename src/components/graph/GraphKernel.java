@@ -1,5 +1,8 @@
 package components.graph;
 
+// import components.set.Set;
+import java.util.Set;
+
 import components.standard.Standard;
 
 /**
@@ -22,8 +25,8 @@ public interface GraphKernel<V> extends Standard<Graph<V>> {
     void addVertex(V v);
 
     /**
-     * Removes {@code v} from this graph if it is present. Any incident edges are
-     * also removed.
+     * Removes {@code v} from this graph if it is present. Any incident edges
+     * are also removed.
      *
      * @param v
      *            the vertex to remove
@@ -48,8 +51,8 @@ public interface GraphKernel<V> extends Standard<Graph<V>> {
     void addEdge(V from, V to);
 
     /**
-     * Removes the directed edge ({@code from}, {@code to}) from this graph if it
-     * is present.
+     * Removes the directed edge ({@code from}, {@code to}) from this graph if
+     * it is present.
      *
      * @param from
      *            the source vertex
@@ -85,6 +88,27 @@ public interface GraphKernel<V> extends Standard<Graph<V>> {
      * @ensures containsEdge = (edge (from, to) is in this)
      */
     boolean containsEdge(V from, V to);
+
+    /**
+     * Reports the set of vertices in this graph.
+     *
+     * @return the set of vertices in this graph
+     * @ensures vertices = set of all vertices in this
+     */
+    Set<V> vertices();
+
+    /**
+     * Reports the set of vertices adjacent from {@code v}.
+     *
+     * @param v
+     *            the source vertex
+     * @return the set of vertices {@code w} such that ({@code v}, {@code w}) is
+     *         an edge in this graph
+     * @requires v is not null and this.containsVertex(v)
+     * @ensures neighbors = set of all vertices w such that this.containsEdge(v,
+     *          w)
+     */
+    Set<V> neighbors(V v);
 
     /**
      * Reports the number of vertices in this graph.
