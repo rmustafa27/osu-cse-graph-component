@@ -31,3 +31,14 @@ Security: in case of vulnerabilities.
 ### Added
 
 - Designed a proof of concept for Graph component (single-file MVP with reachability demo).
+
+## [2026-03-10]
+
+### Added
+
+- Designed kernel and enhanced interfaces for Graph component
+- Added a hierarchy diagram showing the relationship between Standard, GraphKernel, and Graph
+
+### Updated
+
+- Refined the Graph design to use a minimal kernel and moved graph-analysis operations into the enhanced interface
