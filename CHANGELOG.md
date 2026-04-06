@@ -30,7 +30,7 @@ Security: in case of vulnerabilities.
 
 ### Added
 
-- Designed a proof of concept for Graph component (single-file MVP with reachability demo).
+- Designed a proof of concept for Graph component (single-file MVP with reachability demo)
 
 ## [2026-03-10]
 
@@ -42,3 +42,13 @@ Security: in case of vulnerabilities.
 ### Updated
 
 - Refined the Graph design to use a minimal kernel and moved graph-analysis operations into the enhanced interface
+
+## [2026.04.01]
+
+### Added
+- Designed abstract class for Graph component
+- Implemented all secondary Graph methods in GraphSecondary
+- Implemented toString, equals, and hashCode using kernel methods only
+
+### Updated
+- Refined GraphKernel to expose vertices and neighbors so secondary methods could be implemented using kernel methods alone
