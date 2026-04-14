@@ -1,14 +1,8 @@
 package components.graph;
 
-// import java.util.Queue;
-// import java.util.Set;
-
 import components.queue.Queue;
 import components.queue.Queue1L;
 import components.set.Set;
-import components.set.Set1L;
-
-import components.queue.Queue1L;
 import components.set.Set1L;
 
 /**
@@ -49,8 +43,8 @@ public abstract class GraphSecondary<V> implements Graph<V> {
     @Override
     public Set<V> reachableFrom(V start) {
         assert start != null : "Violation of: start is not null";
-        assert this.containsVertex(
-                start) : "Violation of: this.containsVertex(start)";
+        assert this.containsVertex(start)
+                : "Violation of: this.containsVertex(start)";
 
         Set<V> visited = new Set1L<>();
         Queue<V> frontier = new Queue1L<>();
@@ -75,10 +69,10 @@ public abstract class GraphSecondary<V> implements Graph<V> {
     public boolean isReachable(V start, V target) {
         assert start != null : "Violation of: start is not null";
         assert target != null : "Violation of: target is not null";
-        assert this.containsVertex(
-                start) : "Violation of: this.containsVertex(start)";
-        assert this.containsVertex(
-                target) : "Violation of: this.containsVertex(target)";
+        assert this.containsVertex(start)
+                : "Violation of: this.containsVertex(start)";
+        assert this.containsVertex(target)
+                : "Violation of: this.containsVertex(target)";
 
         return this.reachableFrom(start).contains(target);
     }
@@ -103,6 +97,7 @@ public abstract class GraphSecondary<V> implements Graph<V> {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public boolean equals(Object obj) {
         if (obj == null || !(obj instanceof Graph<?>)) {
             return false;
@@ -111,7 +106,7 @@ public abstract class GraphSecondary<V> implements Graph<V> {
             return true;
         }
 
-        Graph<?> other = (Graph<?>) obj;
+        Graph<V> other = (Graph<V>) obj;
 
         if (this.order() != other.order() || this.size() != other.size()) {
             return false;
