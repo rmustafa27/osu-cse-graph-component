@@ -18,19 +18,32 @@ Fixed: for any bug fixes.
 
 Security: in case of vulnerabilities.
 
-## [2026-02-03]
+## [2026.04.24]
 
 ### Added
 
-- Designed a `Graph` component
-- Designed a `GraphAssembleDisassemble` component
-- Designed a `GraphWalk` component
+- Designed test suite for Graph component
+- Added Graph1LTest and GraphSecondaryTest
+- Created two use cases:
+  - NetworkReachabilityDemo
+  - CoursePlanner
 
-## [2026-02-24]
+### Updated
+
+- Improved documentation and project structure
+- Added README with usage and design overview
+
+## [2026.04.01]
 
 ### Added
 
-- Designed a proof of concept for Graph component (single-file MVP with reachability demo)
+- Designed abstract class for Graph component
+- Implemented all secondary Graph methods in GraphSecondary
+- Implemented toString, equals, and hashCode using kernel methods only
+
+### Updated
+
+- Refined GraphKernel to expose vertices and neighbors so secondary methods could be implemented using kernel methods alone
 
 ## [2026-03-10]
 
@@ -43,12 +56,16 @@ Security: in case of vulnerabilities.
 
 - Refined the Graph design to use a minimal kernel and moved graph-analysis operations into the enhanced interface
 
-## [2026.04.01]
+## [2026-02-24]
 
 ### Added
-- Designed abstract class for Graph component
-- Implemented all secondary Graph methods in GraphSecondary
-- Implemented toString, equals, and hashCode using kernel methods only
 
-### Updated
-- Refined GraphKernel to expose vertices and neighbors so secondary methods could be implemented using kernel methods alone
+- Designed a proof of concept for Graph component (single-file MVP with reachability demo)
+
+## [2026-02-03]
+
+### Added
+
+- Designed a `Graph` component
+- Designed a `GraphAssembleDisassemble` component
+- Designed a `GraphWalk` component

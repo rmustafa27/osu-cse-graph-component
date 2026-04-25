@@ -1,8 +1,8 @@
 # Portfolio Part 6: Finishing Touches
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Rand Mustafa
+- **Dot Number**: Mustafa.128
+- **Due Date**: 04/24 @ 11:59 PM
 
 ## Assignment Overview
 
@@ -50,7 +50,6 @@ course, but just knowing about them could set you up for long term success.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
 
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
@@ -141,7 +140,6 @@ to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
 
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
@@ -307,18 +305,18 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I definitely have a better understanding of software development after completing this project. Earlier in the course, a lot of the assignments felt very structured and guided, so it wasn’t always clear how everything connected to real-world development. This project changed that because I had to design something from scratch, make decisions about structure, and deal with tradeoffs. It felt much closer to what actual development looks like, especially when I had to refine my design multiple times to make everything work together.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+One gap I noticed was my ability to design clean interfaces from the beginning. I initially underestimated how important it is to think ahead about what methods will be needed, especially for layering secondary methods on top of kernel methods. I also realized I wasn’t as comfortable with writing tests without a reference implementation. To address this, I focused more on understanding how each method should behave and used the OSU discipline as a guide, especially making sure non-mutating methods actually preserved state.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+My perspective has become more realistic. Software development is not just writing code, it involves planning, revising designs, and thinking about how different parts interact. Even though it was challenging at times, I still enjoy it. In fact, I think I enjoy it more now because I can see how these concepts apply to real systems, especially in areas like cybersecurity where structured design and reliability matter a lot.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -326,29 +324,35 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+Through this project, I developed several skills. On the technical side, I improved my understanding of abstraction, interface design, and how to layer functionality properly. I also got more comfortable working with data structures like maps and sets to build more complex systems. Beyond that, I improved my debugging and problem-solving skills, especially when things didn’t work the first time. I also got better at organizing a project and using Git for version control.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+- Designed and implemented a custom Graph component using layered architecture (kernel, secondary, and implementation)
+- Applied abstraction and interface-driven design following strict software engineering discipline
+- Built adjacency-list graph representation using maps and sets for efficient operations
+- Developed comprehensive JUnit test suites ensuring correctness and non-mutating behavior
+- Created real-world use cases demonstrating graph applications in network analysis and course planning
+- Utilized Git and GitHub for version control, branching, and pull request workflows
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+This project actually reinforced my interest in cybersecurity. Modeling systems as graphs made me realize how relevant these concepts are for things like network analysis, attack paths, and system dependencies. It made the topic feel more practical and aligned with what I want to do in the future. Instead of pushing me away, it made me more interested in applying software development skills to security-related problems.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+To continue on my career path, I can build more projects that connect software development with cybersecurity, such as expanding my home SOC lab or creating tools for monitoring and analyzing network activity. I can also continue working on certifications like Security+ and gain more hands-on experience through internships and labs.
+
+For mentorship, I can reach out to professors, my manager from my Linux Systems Administrator role, and professionals I connect with on LinkedIn. These are people who have experience in both systems and security, and they can provide guidance on how to keep improving and making my skills more practical.
 
 ### Changelog
 
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -384,7 +388,6 @@ request merge (or at least tag your commits). This is not required.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
@@ -436,6 +439,5 @@ If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
 
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [survey]: https://forms.gle/dumXHo6A4Enucdkq9
