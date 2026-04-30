@@ -46,9 +46,24 @@ Security: in case of vulnerabilities.
 ## [2026.04.01]
 
 ### Added
+
 - Designed abstract class for Graph component
 - Implemented all secondary Graph methods in GraphSecondary
 - Implemented toString, equals, and hashCode using kernel methods only
 
 ### Updated
+
 - Refined GraphKernel to expose vertices and neighbors so secondary methods could be implemented using kernel methods alone
+
+## [2026.04.15]
+
+### Added
+
+- Designed kernel implementation for Graph component
+- Implemented Graph1L using an adjacency-list representation
+- Added convention and correspondence for Graph1L
+
+### Updated
+
+- Refined the Graph representation to store vertices in a map from each vertex to its outgoing neighbor set
+- Added explicit edge count tracking to make size efficient
